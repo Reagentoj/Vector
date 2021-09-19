@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="default_font_size">16sp</dimen>
+    <dimen name="default_padding">5dp</dimen>
+    <dimen name="default_margin">10dp</dimen>
+    <dimen name="signin_signup_margin">25dp</dimen>
+    <dimen name="title_font_size">28sp</dimen>
     <dimen name="margin_left_right">10dp</dimen>
-    <dimen name="margin_top_bottom">100dp</dimen>
-    <dimen name="cardview_corner_radius">20dp</dimen>
-    <dimen name="cardview_elevation">15dp</dimen>
+    <dimen name="cardview_margin_top">100dp</dimen>
+    <dimen name="cardview_margin_bottom">180dp</dimen>
+    <dimen name="cardview_corner_radius">30dp</dimen>
+    <dimen name="cardview_elevation">25dp</dimen>
+    <dimen name="cardview_edittext_marginTopOfCardview">150dp</dimen>
+    <dimen name="cardview_edittext_marginTopOfEdittext">20dp</dimen>
+    <dimen name="cardview_edittext_height">60dp</dimen>
+    <dimen name="carview_edittext_width">300dp</dimen>
+    <dimen name="cardview_buttonNext_elevation">10dp</dimen>
 </resources>

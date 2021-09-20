@@ -57,61 +57,75 @@
         app:cardElevation="@dimen/cardview_elevation">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cardViewConstraint"
+            android:id="@+id/cardViewConstraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/mailEditText"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/nicknameRegistrationTextInputLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/cardview_edittext_marginTopOfCardview"
-                app:layout_constraintEnd_toEndOf="@id/cardViewConstraint"
-                app:layout_constraintStart_toStartOf="@id/cardViewConstraint"
-                app:layout_constraintTop_toTopOf="@id/cardViewConstraint"
-                app:startIconDrawable="@drawable/ic_email">
+                android:layout_marginTop="@dimen/nickname_edittext_marginTopOfCardview"
+                app:startIconDrawable="@drawable/ic_person"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintTop_toTopOf="@id/cardViewConstraintLayout"
+                app:layout_constraintLeft_toLeftOf="@id/cardViewConstraintLayout"
+                app:layout_constraintRight_toRightOf="@id/cardViewConstraintLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nicknameRegistrationEditText"
                     android:layout_width="@dimen/carview_edittext_width"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/email"
-                    android:inputType="textEmailAddress" />
+                    android:layout_height="@dimen/cardview_edittext_height"
+                    android:inputType="textPersonName"
+                    android:hint="@string/nickname"
+                    android:maxLength="@integer/nickname_max_length"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/passwordEditText"
+                android:id="@+id/mailLoginTextInputLayout"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/cardview_edittext_marginTopOfEdittext"
-                app:layout_constraintEnd_toEndOf="@id/mailEditText"
-                app:layout_constraintStart_toStartOf="@id/mailEditText"
-                app:layout_constraintTop_toBottomOf="@+id/mailEditText"
-                app:passwordToggleEnabled="true"
-                app:startIconDrawable="@drawable/ic_lock">
+                android:layout_marginTop="@dimen/default_margin"
+                app:counterMaxLength="@integer/phone_number_max_length"
+                app:layout_constraintEnd_toEndOf="@id/nicknameRegistrationTextInputLayout"
+                app:layout_constraintStart_toStartOf="@id/nicknameRegistrationTextInputLayout"
+                app:layout_constraintTop_toBottomOf="@id/nicknameRegistrationTextInputLayout"
+                app:startIconDrawable="@drawable/ic_phone"
+                app:prefixText="@string/phone_prefix">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailRegistrationEditText"
+                    android:layout_width="@dimen/carview_edittext_width"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone"
+                    android:inputType="phone"
+                    android:maxLength="@integer/phone_number_max_length"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordLoginTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                app:layout_constraintEnd_toEndOf="@id/mailLoginTextInputLayout"
+                app:layout_constraintStart_toStartOf="@id/mailLoginTextInputLayout"
+                app:layout_constraintTop_toBottomOf="@+id/mailLoginTextInputLayout"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/ic_lock"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordRegistrationEditText"
                     android:layout_width="@dimen/carview_edittext_width"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
                     android:inputType="textPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:id="@+id/forgotPasswordEditText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/default_margin"
-                android:clickable="true"
-                android:text="@string/forgot_password"
-                android:textColor="@color/sky_blue"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@id/passwordEditText"
-                app:layout_constraintStart_toStartOf="@id/passwordEditText"
-                app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
 
             <ImageButton
                 android:id="@+id/registrationButton"
@@ -123,8 +137,8 @@
                 android:contentDescription="@string/sign_in"
                 android:elevation="20dp"
                 android:src="@drawable/ic_circle_arrow_next"
-                app:layout_constraintBottom_toBottomOf="@id/cardViewConstraint"
-                app:layout_constraintEnd_toEndOf="@id/cardViewConstraint" />
+                app:layout_constraintBottom_toBottomOf="@id/cardViewConstraintLayout"
+                app:layout_constraintEnd_toEndOf="@id/cardViewConstraintLayout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

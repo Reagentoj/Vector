@@ -11,6 +11,7 @@
     <dimen name="cardview_corner_radius">30dp</dimen>
     <dimen name="cardview_elevation">25dp</dimen>
     <dimen name="cardview_edittext_marginTopOfCardview">150dp</dimen>
+    <dimen name="nickname_edittext_marginTopOfCardview">100dp</dimen>
     <dimen name="cardview_edittext_marginTopOfEdittext">20dp</dimen>
     <dimen name="cardview_edittext_height">60dp</dimen>
     <dimen name="carview_edittext_width">300dp</dimen>
